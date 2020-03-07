@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ls -lamp
+chmod 777 my_ls.sh
+

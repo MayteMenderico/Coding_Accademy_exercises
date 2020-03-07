@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#to allow access
+
+
+chmod 777 my_ls.sh
+
+
