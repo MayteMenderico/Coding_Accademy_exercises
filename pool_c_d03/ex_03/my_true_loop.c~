@@ -1,0 +1,19 @@
+#include<unistd.h>
+void my_putchar(char);
+
+
+void my_true_loop(unsigned int n);
+
+{
+    int x;
+    
+    for (x=0; x<=n; x++)
+	
+
+    {
+        my_putchar ('+');
+    }
+    my_putchar ('\n');
+    
+ }
+

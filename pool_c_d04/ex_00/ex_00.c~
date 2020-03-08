@@ -1,0 +1,17 @@
+#include<sdtio.h>
+void my_putchar(char C){
+    void my_init(int *);
+}
+
+int my_init(int* i){
+    return *i;
+}
+
+int main(){
+    int i = 42;
+    my_init(&i);
+    my_putchar(“%d\n”,i);
+         
+}
+
+    

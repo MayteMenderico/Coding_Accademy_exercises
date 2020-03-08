@@ -1,0 +1,29 @@
+#include<unistd.h>
+
+void my_putchar(char);
+    int m
+
+{
+    char c;
+    for (c = 'A'; c <= 'Z'; c++)
+    {
+        my_putchar (c);
+    }
+    my_putchar ('\n');
+    
+ }
+
+    
+
+
+      
+   
+
+
+    
+
+     
+    
+        
+    
+       
