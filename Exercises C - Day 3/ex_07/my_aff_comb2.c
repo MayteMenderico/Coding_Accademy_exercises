@@ -1,8 +1,29 @@
-#include<unistd.h>
+#include <unistd.h>
+void my_putchar(char c);
+void my_putnbr(int n);
 
-void my_putchar(char);
-    int my_aff_comb2();
+int my_aff_comb2()
+{
 
+    for (int i = 0; i < 99; i++)
     {
-        char c;
-}
+
+        for (int j = 1; j <= 99; j++)
+        {
+            if (i < 10)
+            {
+                my_putchar('0');
+
+            }
+            my_putnbr(i);
+            my_putchar(' ');
+            if (j < 10)
+            {
+                my_putchar('0');
+
+            }
+            my_putnbr(j);
+            if (j != 99){
+              my_putchar(',');  
+            }
+            
