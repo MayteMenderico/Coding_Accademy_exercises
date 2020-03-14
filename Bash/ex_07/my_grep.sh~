@@ -1,5 +1,0 @@
-#!/bin/bash
-
-
-echo -e 'Hello, this is a document.\n I love document, they are cool' | sed -e 's/document/test/'
-
