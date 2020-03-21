@@ -1,0 +1,37 @@
+.a-great-style {
+  font-family: "Impact";
+  background-color: white;
+  font-size: 21px;
+  color: white;
+}
+
+.a-great-style:nth-child(1) {
+  background-color: black;
+}
+
+.a-great-style:nth-child(2) {
+  font-size: 27px;
+  color: black;
+}
+
+body {
+  background-color: yellow;
+}
+.a-great-style span {
+  color: red;
+  font-style: italic;
+}
+.left-bordered-and-big {
+  float: left;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  width: 60%;
+}
+.right-bordered-and-small {
+  float: right;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  width: 20%;
+}
