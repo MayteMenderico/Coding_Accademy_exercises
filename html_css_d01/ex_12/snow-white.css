@@ -1,0 +1,23 @@
+.a-great-style {
+  font-family: "Impact";
+  background-color: white;
+  font-size: 21px;
+  color: white;
+}
+
+.a-great-style:nth-child(1) {
+  background-color: black;
+}
+
+.a-great-style:nth-child(2) {
+  font-size: 27px;
+  color: black;
+}
+
+body {
+  background-color: yellow;
+}
+.a-great-style span {
+  color: red;
+  font-style: italic;
+}
