@@ -76,6 +76,7 @@ header {
   padding: 22px 25px;
   right: 10px;
   background-color: white;
+  z-index: 999;
 }
 header nav {
   float: right;
