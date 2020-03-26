@@ -1,0 +1,15 @@
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #000;
+}
+
+.pagination li.active {
+    background-color: #000;
+}
+
+nav {
+    background-color: #ccc;
+    font-size: x-large;
+}
+

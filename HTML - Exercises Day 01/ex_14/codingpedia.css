@@ -1,0 +1,143 @@
+@import "reset.css";
+
+/* padrões do site todo */
+
+body {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+input,
+select,
+textarea {
+}
+
+label {
+}
+input {
+}
+select {
+}
+textarea {
+}
+button {
+}
+
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+abbr {
+}
+
+table {
+  border: 2px solid black;
+}
+tr {
+}
+th {
+  background-color: #ddd;
+  text-align: left;
+  padding: 4px;
+  border-right: 2px solid black;
+}
+td {
+  padding: 4px;
+  border-right: 2px solid black;
+  background-color: #eee;
+}
+
+tr:nth-child(2n) td {
+  background-color: white;
+}
+
+code {
+}
+
+/* específico da página */
+
+header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border: 1px solid black;
+  padding: 22px 25px;
+  right: 10px;
+  background-color: white;
+  z-index: 999;
+  
+}
+header nav {
+  float: right;
+  border: 1px solid black;
+  padding: 10px;
+}
+header a {
+  border: 1px solid black;
+  display: block;
+  float: left;
+  padding: 5px;
+}
+header a:hover {
+  background-color: #00bcd4;
+}
+header h1 {
+  float: left;
+  padding-top: 8px;
+}
+
+main {
+  /* margin-top: 120px; */
+  border: 1px solid black;
+  margin: 120px 10px 70px;
+  position: relative;
+  display: table;
+  padding: 15px;
+}
+
+main section {
+  float: left;
+  width: 75%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+main aside {
+    width: 22%;
+    border: 1px solid black;
+    position: fixed;
+    right: 25px;
+    top: 120px;
+    padding: 15px;
+    line-height: 1.4;
+    bottom: 70px
+}
+form .left{width: 25%;float: left;}
+form .right{width: 85%;float: right;}
+form .right textarea {width: 118%; float: right;}
+form .right button{width: 30%; float: right}
+
+footer {
+  clear: both;
+  border: 1px solid black;
+  padding: 15px;
+  position: fixed;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background-color: white;
+  z-index: 999;
+}
