@@ -1,0 +1,1 @@
+SELECT name as 'Name of the most expensive subscription', price as 'Price' from subscriptions order by price desc limit 1;

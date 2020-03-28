@@ -20,7 +20,7 @@ void algo_line(int **tab, int line) {
 		write(1, &point, 1);
 		write(1, &lineBreak, 1);
 		
-		print_tab(tab);	
+		print_tab(tab);
 	}
 }
 

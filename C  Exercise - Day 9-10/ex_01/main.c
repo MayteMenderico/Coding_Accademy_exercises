@@ -1,4 +1,4 @@
-#include "rubiks.h"
+#include "rubik.h"
 #include <stdlib.h>
 
 int main() {

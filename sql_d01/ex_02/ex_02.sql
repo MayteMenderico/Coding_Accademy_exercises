@@ -1,0 +1,1 @@
+SELECT TABLE_COMMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'coding' AND TABLE_NAME = 'movies';

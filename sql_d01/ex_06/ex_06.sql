@@ -1,0 +1,1 @@
+SELECT movies.title as 'Title of the last 42 movies' from movies order by movies.id desc limit 0, 42;

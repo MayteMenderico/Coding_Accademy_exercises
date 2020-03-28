@@ -20,8 +20,9 @@ void algo_line(int **tab, int line) {
 		write(1, &point, 1);
 		write(1, &lineBreak, 1);
 		
-		print_tab(tab);	
 	}
+
+	print_tab(tab);	
 }
 
 void algo_column(int **tab, int column) {
@@ -43,8 +44,9 @@ void algo_column(int **tab, int column) {
 		write(1, &point, 1);
 		write(1, &lineBreak, 1);
 
-		print_tab(tab);
 	}
+
+	print_tab(tab);
 }
 
 void algo_square(int **tab, int square) {
@@ -68,19 +70,7 @@ void algo_square(int **tab, int square) {
 		write(1, &point, 1);
 		write(1, &lineBreak, 1);
 
-		print_tab(tab);
 	}
+	
+	print_tab(tab);
 }
-/*void algo_line(int **table, int line);
-• void algo_column(int **table, int column);
-• void algo_square(int **table, int square);
-Write three algorithm to play with your magic square:
-• algo_line, taking the table and the line number as parameter.
-this function must rotate this single line on the Left.
-• algo_column, taking the table and the column number as parameter.
-This function must rotate this single column on the Top.
-• algo_square, taking the table and the square number as parameter.
-This function must rotate this single square Clockwise.
-You must also create a define PRINT_SQUARE_DEBUG_. If this define is set to 1, you have to display the
-rotation way and the square, otherwise you shouldn’t.
-*/

@@ -20,8 +20,9 @@ void algo_line_reverse(int **tab, int line) {
 		write(1, &point, 1);
 		write(1, &lineBreak, 1);
 		
-		print_tab(tab);	
 	}
+
+	print_tab(tab);
 }
 
 void algo_column_reverse(int **tab, int column) {
@@ -43,19 +44,20 @@ void algo_column_reverse(int **tab, int column) {
 		write(1, &point, 1);
 		write(1, &lineBreak, 1);
 
-		print_tab(tab);
 	}
+
+	print_tab(tab);
 }
 
 void algo_square_reverse(int **tab, int square) {
 	int tmp;
 
-	tmp = tab[square + 1][square];
+	tmp = tab[square][square];
 
-	tab[square + 1][square] = tab[square][square];	
-	tab[square][square] = tab[square + 1][square];	
-	tab[square][square + 1] = tab[square + 1][square + 1];	
-	tab[square + 1][square + 1] = tmp;
+	tab[square][square] = tab[square][square+1];	
+	tab[square][square+1] = tab[square + 1][square+1];	
+	tab[square+1][square + 1] = tab[square + 1][square];	
+	tab[square + 1][square] = tmp;
 
 	if(PRINT_SQUARE_DEBUG_) {
 		char *message = "Rotate Counter Clockwise square ";
@@ -68,12 +70,7 @@ void algo_square_reverse(int **tab, int square) {
 		write(1, &point, 1);
 		write(1, &lineBreak, 1);
 
-		print_tab(tab);
 	}
+
+	print_tab(tab);
 }
-/*void algo_line_reverse(int **table, int line);
-• void algo_column_reverse(int **table, int column);
-• void algo_square_reverse(int **table, int square);
-Take your previous exercise and reverse the algorithms.
-Adding this piece of code to the previous one
-*/
