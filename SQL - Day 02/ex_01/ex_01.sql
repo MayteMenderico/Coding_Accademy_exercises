@@ -1,0 +1,1 @@
+select count as 'Number of members', round(avg) as 'Average age' from ( SELECT AVG(NOW() - birthdate) / 10000000000 as 'avg', count(*) as 'count' FROM `profiles` ) as profiles;

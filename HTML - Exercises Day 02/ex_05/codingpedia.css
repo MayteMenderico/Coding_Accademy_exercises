@@ -1,0 +1,199 @@
+@import "reset.css";
+
+/* padrÃƒÂµes do site todo */
+
+body {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+input,
+select,
+textarea {
+}
+
+label {
+}
+input {
+}
+select {
+}
+textarea {
+}
+button {
+}
+
+form .left {width: 25%;float: left; clear: both;}
+form .right {width: 75%;float: right;margin-bottom: 10px;}
+form .right input[type="text"],
+form .right input[type="number"],
+form .right input[type="date"],
+form .right input[type="email"],
+form .right textarea,
+form .right select {width: 100%;}
+form .text-right {
+  clear: both;
+  text-align: right;
+}
+
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid black;
+  padding: 15px
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+form {
+  border: 1px solid black
+  padding: 15px
+}
+
+table {
+  border: 2px solid black;
+}
+tr {
+}
+th {
+  background-color: #ddd;
+  text-align: left;
+  padding: 4px;
+  border-right: 2px solid black;
+}
+td {
+  padding: 4px;
+  border-right: 2px solid black;
+  background-color: #eee;
+}
+
+tr:nth-child(2n) td {
+  background-color: white;
+}
+
+code {
+}
+
+/* especÃƒÂ­fico da pÃƒÂ¡gina */
+
+header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border: 1px solid black;
+  padding: 22px 25px;
+  right: 10px;
+  background-color: white;
+  z-index: 999;
+  
+}
+header nav {
+  float: right;
+  border: 1px solid black;
+  padding: 10px;
+}
+header a {
+  border: 1px solid black;
+  display: block;
+  float: left;
+  padding: 5px;
+}
+header a:hover {
+  background-color: #00bcd4;
+}
+header h1 {
+  float: left;
+  padding-top: 8px;
+}
+button{
+  float: right:
+}
+
+main {
+  /* margin-top: 120px; */
+  border: 1px solid black;
+  margin: 120px 10px 70px;
+  position: relative;
+  display: table;
+  padding: 15px;
+  width: calc( 78% - 47px );
+}
+
+main section {
+  float: left;
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+main aside {
+  width: 22%;
+  border: 1px solid black;
+  position: fixed;
+  right: 25px;
+  top: 120px;
+  padding: 15px;
+  line-height: 1.4;
+  bottom: 70px;
+}
+
+footer {
+  clear: both;
+  border: 1px solid black;
+  padding: 15px;
+  position: fixed;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background-color: white;
+}
+
+.container{padding-right: 20px;
+padding-left: 20px;
+width: 50%;
+}
+#lin{
+  background: linear-gradient(to right,lightblue , darkblue);
+  width: 100%;
+  height: 30px;
+}
+
+@media (max-width:400px) {
+  header {}
+  header h1 {
+    font-size: 23px;
+    width: 151px;
+    padding-top: 0px;
+  }
+  header nav {}
+  header a {}
+  form label{
+    font-size: 11px;
+  }
+  footer{
+    font-size: 11px;
+  }
+  main {
+    width: calc( 78% - 25px );
+    padding: 5px;
+  }
+  main section {
+    padding: 5px 5px;
+  }
+  main aside {
+    font-size: 9px;
+    padding: 5px;
+    right: 10px;
+  }
+}
+
