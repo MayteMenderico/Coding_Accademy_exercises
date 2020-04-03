@@ -1,15 +1,16 @@
 <?php
 
-class Mars {
-    public $id = 0;
+class Mars 
+{
+    public static $id = -1;
 
-    public function Mars() {
-        $this->$id++;
+    public function getId():int 
+    {
+        self::$id += 1;
+        return self::$id;
     }
-
-    public static function getId():int {
-        return $this->$id;
-    }
+    
+    
 }
 
 ?>

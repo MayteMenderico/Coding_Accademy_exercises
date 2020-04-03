@@ -4,7 +4,7 @@ class Astronaut {
     private $name = "";
     public $snacks = 0;
     public $destination = NULL;
-    public $id = 0;
+    public static $id = -1;
 
     public function Astronaut(string $name) {
         $this->setName($name);
@@ -25,7 +25,8 @@ class Astronaut {
     }
 
     public function getId():int {
-        return $this->id;
+        self::$id++;
+        return self::$id;
     }
 
     public function setDestination($destination):void {

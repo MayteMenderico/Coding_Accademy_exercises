@@ -4,7 +4,7 @@ class Astronaut {
     private $name = "";
     public $snacks = 0;
     public $destination = NULL;
-    public $id = 0;
+    public static $id = -1;
 
     public function Astronaut(string $name) {
         $this->setName($name);
@@ -33,7 +33,8 @@ class Astronaut {
     }
 
     public function getId():int {
-        return $this->id;
+        self::$id++;
+        return self::$id;
     }
 
     public function setDestination($destination):void {
@@ -49,7 +50,7 @@ class Astronaut {
     }
 
     public function sumSnacks():void {
-        $this->snacks += 1;
+        $this->snacks = ++$this->snacks;
     }
 
     public function doAction($action=""):void {
@@ -66,10 +67,10 @@ class Astronaut {
                     printf("%s: is eating mars number %d !\n", $this->getName(), $action::getId());
                     $this->sumSnacks();
                 } else {
-                    printf("%s: Nothing to do\n");
+                    printf("%s: Nothing to do\n", $this->getName());
                 }
             } else {
-                printf("%s: Nothing to do\n");
+                printf("%s: Nothing to do\n", $this->getName());
             }
         } else {
             printf("%s: Already working !\n", $this->getName());

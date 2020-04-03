@@ -34,7 +34,7 @@ class Team {
     public function remove($astronaut):void {
         if(get_class($astronaut) === "Astronaut"){
             for($x=0; $x < count($this->astronauts); $x++) {
-                if($this->astronauts[$x]->id === $astronaut->id){
+                if($this->astronauts[$x] === $astronaut){
                     array_splice($this->astronauts, $x, 1);
                     break;
                 }

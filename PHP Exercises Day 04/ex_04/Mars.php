@@ -1,13 +1,15 @@
 <?php namespace chocolate;
 
 class Mars {
-    public static $id = 0;
+    public static $id = -1;
 
     public function Mars() {
         $this->id++;
     }
 
-    public function getId():int {
+    public function getId():int 
+    {
+        self::$id += 1;
         return self::$id;
     }
 }

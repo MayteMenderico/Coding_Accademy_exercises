@@ -3,13 +3,12 @@
 class Phobos {
     private $mars = NULL;
 
-    public function Phobos($mars="") {
-        echo "INITIALIZING";
+    public function __construct($mars="") {
         if(get_class($mars) === "planet\Mars") {
             $this->mars = $mars;
-            echo "Phobos place in orbit.";
+            echo "Phobos place in orbit.\n";
         } else {
-            echo "No planet given.";
+            echo "No planet given.\n";
         }
     }
 

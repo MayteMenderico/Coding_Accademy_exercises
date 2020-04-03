@@ -4,7 +4,7 @@ class Astronaut {
     private $name = "";
     public $snacks = 0;
     public $destination = NULL;
-    public $id = 0;
+    public static $id = -1;
 
     public function Astronaut(string $name) {
         $this->setName($name);
@@ -33,7 +33,8 @@ class Astronaut {
     }
 
     public function getId():int {
-        return $this->id;
+        self::$id++;
+        return self::$id;
     }
 
     public function setDestination($destination):void {
@@ -49,29 +50,27 @@ class Astronaut {
     }
 
     public function sumSnacks():void {
-        $this->snacks = $this->snacks++;
+        $this->snacks = ++$this->snacks;
     }
 
     public function doAction($action=""):void {
         if($this->getDestination() === NULL){
-            if($this->getName() === "Matta") {
-                if(gettype($action) === "object") {
-                    if(get_class($action) === "planet\Mars"){
+            if(gettype($action) === "object") {
+                if(get_class($action) === "planet\Mars"){
+                    if($this->getName() === "Mutta") {
                         printf("%s: started a mission !\n", $this->getName());
                         $this->setDestination(get_class($action));
-                    } else if(get_class($action) === "chocolate\Mars"){
-                        printf("%s: is eating mars number %d !\n", $this->getName(), $action::getId());
-                        $this->sumSnacks();
-                    } 
-                } else {
-                    if($action === ""){
-                        printf("%s: Nothing to do");
-                    } else{
-                        printf("%s: %s !", $this->getName(), $action);
+                    } else {
+                        printf("%s: Nothing to do\n", $this->getName());
                     }
+                } else if(get_class($action) === "chocolate\Mars"){
+                    printf("%s: is eating mars number %d !\n", $this->getName(), $action::getId());
+                    $this->sumSnacks();
+                } else {
+                    printf("%s: Nothing to do\n", $this->getName());
                 }
             } else {
-                printf("%s: %s !", $this->getName(), $action);
+                printf("%s: Nothing to do\n", $this->getName());
             }
         } else {
             printf("%s: Already working !\n", $this->getName());

@@ -15,7 +15,6 @@ $spaceBro->add($mutta);
 $spaceBro->add($hibito);
 $spaceBro->add($serika);
 
-$spaceBro->doActions(new planet\Mars);
-$spaceBro->doActions(new chocolate\Mars);
+$spaceBro->doActions();
 
 ?>
