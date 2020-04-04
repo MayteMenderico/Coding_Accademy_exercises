@@ -1,6 +1,5 @@
 <?php 
 
-$map = [];
 
 function my_add_elem_map($key, $value, &$map) {
 	if(!isset($map[$key])) $map[$key] = $value;
@@ -20,6 +19,8 @@ function my_delete_elem_map($key, &$map) {
 function my_is_elem_valid($key, $value, &$map) {
 	return isset($map[$key]) && $map[$key] === $value ? true : "You have to give good parameters.\r\n";
 }
+/*
+$map = [];
 
 var_dump(my_add_elem_map("fruit","banana",$map));
 var_dump(my_add_elem_map("fruit","orange",$map));

@@ -1,40 +1,28 @@
 <?php 
 
-function my_order_class_name(...$obj) {
+function my_order_class_name(...$objs) {
+	$return = [];
+	foreach($objs as $obj) {
+		$type = my_gettype($obj);
+		$length = strlen($type);
 
+		if(!isset($return[$length])) $return[$length] = [];
+		if(array_search($type, $return[$length]) === false) $return[$length][] = $type;
+	}
+
+	/* order by size */
+	ksort($return);
+
+	/* order by name */
+	foreach($return as $key => $val) {
+		natcasesort($return[$key]);
+	}
+
+	return array_values($return);
 }
 
-
-function my_order_name(...$args) {
-	return 
+function my_gettype($var) {
+	$type = gettype($var);
+	return $type === 'object' ? get_class($var) : $type;
 }
 
-class classMyClass()
-
-
-/* 
-
-a two dimension array containing the objects passed as parameter, sorted by the length of the type
-name, then by alphabetical order of type name (case insensitive). If an argument is an object, the complete
-qualified class name will be used for sorting. Each type of class name must be unique.
-r Terminal - + x
-*/
-return ;
-//require(“ex_08.php”);
-classMyClass
-{
-};
-$args = [
-	true,
-	76,
-	false,
-	12.5,
-	"Coucou !",
-	[1, 2, 3],
-	new MyClass(),
-	NULL
-];
-print_r(my_order_class_name(...$args));
-/*
-will produce the following output:
-*/

@@ -19,3 +19,22 @@ So, we’ll create some functions to create and get these maps.
 If a continent, a country or a city is not found, you have to write the error message: “Failure to get continent.”,
 “Failure to get country.”, “Failure to get city” followed by a new line and return NULL
 */
+
+
+function my_create_continent($continentName, &$map) {
+    if(!isset($map[$continentName]))
+    $map[$continentName] = [];
+}
+
+function my_create_country ($countryName, $continentName, &$map) {
+    if( isset($map[$continentName]) && !isset($map[$continentName][$countryName]) ) {
+        $map[$continentName][$countryName] = [];
+    }
+}
+
+function my_create_city($cityName, $num, $countryName, $continentName, &$map) {
+    if( isset($map[$continentName]) && isset($map[$continentName][$countryName]) &&  !isset($map[$continentName][$countryName][$cityName]) ) 
+    $map[$continentName][$countryName][$cityName] = $num;
+}
+
+
