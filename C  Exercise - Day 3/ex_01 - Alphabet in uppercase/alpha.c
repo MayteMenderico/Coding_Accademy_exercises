@@ -3,7 +3,7 @@
 void my_putchar(char);
     void alpha();
 
-{
+int main (){
     char c;
     for (c = 'A'; c <= 'Z'; c++)
     {
