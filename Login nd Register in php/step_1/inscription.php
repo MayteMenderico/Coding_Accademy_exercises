@@ -32,7 +32,7 @@ if($error){
         </div>
         <div class="form-register">
             <form action="../php/@validation/user/create.php" method="post">
-                <input type="text" name="name" placeholder="text" minlength="3" maxlength="10" required>
+                <input type="text" name="name" placeholder="name" minlength="3" maxlength="10" required>
                 <input type="email" name="email" placeholder="email" required>
                 <input type="password" name="password" placeholder="password" required>
                 <input type="password" name="password_confirmation" placeholder="password_confirmation" required>

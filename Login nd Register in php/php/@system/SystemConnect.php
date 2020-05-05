@@ -16,8 +16,6 @@ class SystemConnect {
         } catch(PDOException $err){
             printf("Connection failed! %s", $err->getMessage());
         }
-
-        return $this->conn;
     }
 
     private function setParams($stmt, $params=array()){

@@ -1,0 +1,43 @@
+#dbh.inc.php
+
+1) This file will create a connection with phpmyadmin
+Steps:
+1) Create class DbConnection
+2) Create a construct public function  => construct is responsible to call automatically our connection between our system (webpage) and the 
+database (php myadmin)
+3) Create the connection parameters => what we will use to connect ( dbservername, password, name)
+4)Create function Try => responsible for openning the connection - this function is the one that tries to connect our webpage with mysql admin
+5) Inside TRY function we have to call an atrribute, for this we will use $this and will call our class named conn and this will create a new
+ connection type PDO $this->conn = new PDO sprintf("mysql:dbname=%s; host=%s", $this->dbDatabase, $this->dbUrl), $this->dbUsername, $this->dbPassword)
+ this was copy from PDO page (https://www.php.net/manual/en/class.pdo.php - upvote 4)
+ 6)CATCH, in case there is an error, it must threat the error and send a message to the user.
+
+ #signup.inc.php
+
+ This file will register the users in phpmyadmin
+ Steps to follow:
+ 1) call the file dbh.inc.php in order to be able to access our database (myphpadmin)
+ 2) POST = variable that receive the inputs from the form Example: if you write your name in the login page, the POST will receive this name, the isset verifies
+ if the name exists and $succeed will verify if it fits the parameters given.
+ 3) Verify the user information, by saying that if $succeed it will be true
+ and if there is an error it will turn back to us an error message (array = mix of information).
+  $succeed = true;
+  $errorList = [];
+ 4)we will use the funtion POST to verify if any form was sent
+    *function isset, verifies if something exists
+    *ifstrlen = verifies the size of of our inputs have at least 3 char or a maximun of 10 char
+    *array_push = if the user input has less than 3 char or more than 10, the array_push
+                    will insert a message of invalid name and the $succeed will be false because is out of the parameters
+                    we gave.
+  5) I will do the same verification with all the attributes.
+  6) Line 27 - If everything succeed the attribute dbconn will create a new DbConnection and will create a new user in SQL
+  7) Bind function - put together the attribustes given - PDO function
+  8) I changed the form names in signup file in order to work
+  9) I create a variable stmt (statement) to strore things
+  BINDPARAM Documentation = https://www.php.net/manual/en/pdostatement.bindparam
+  
+
+  
+
+
+                

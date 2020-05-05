@@ -1,0 +1,136 @@
+body  {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-image: url('../images/coffeePhoto.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+   
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+button, .button {
+    background-color: burlywood;
+    border: 1px solid brown;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    padding: 5px;
+    min-width: 150px;
+    min-height: 35px;
+}
+
+button:hover, .button:hover {
+    background-color: brown;
+    border: 1px solid burlywood;
+    color: white;
+}
+
+input[type=checkbox] {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    color: green;
+}
+
+.error-dialog {
+    background-color: rgba(255, 0, 0, .75);
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.container-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container-register-noheight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.form-register {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, .75);
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form-register .form-redirect a {
+    text-decoration: none;
+    color: black;
+}
+
+.form-register .form-redirect a:hover {
+    color: grey;
+}
+
+.form-register .form-group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.form-register .form-group-center {
+    text-align: center;
+}
+
+.form-register .form-group .form-label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    min-width: 150px;
+    padding-right: 10px;
+}
+
+.form-register .form-group .form-input {
+    width: 100%;
+}
+
+.form-register .form-group .form-input input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    line-height: 1.3em;
+    font-size: 1.2em;
+}
+
+
+/* HEADER CSS BLOCK */
+.header {
+    background-color: #783c00;
+}
+
+.header .header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-buttons div {
+    padding: 10px;
+}
+.form-redir{
+   
+    
+    text-align: right;
+}
