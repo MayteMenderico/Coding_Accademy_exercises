@@ -49,16 +49,20 @@ class LoginController extends AppController {
   public function login(Request $request) {
   	// Obtain POST values of login.html.twig
   	$usernameEmail = $request->params['username-email'];
-  	$password = $request->params['password'];
-    $remember = $request->params['remember_me'];
+	$password = $request->params['password'];
+	$remember = NULL;
+	  
+	if(isset($request->params['remember_me'])){
+		$remember = $request->params['remember_me'];
+	}
 
   	if ($this->correctCredentials($usernameEmail, $password, $remember)){
 
   		//Check if Remember me is checked and create cookies.
 
       //redirect to index
-      var_dump($remember);
-      //return $this->render('index', ['base' => $request->base, 'error' => $this->flashError]);
+	  var_dump($remember);
+	  header("Location: index");
   	}else{
   		$err = "Invalid credentials.<br>";
   		var_dump($err);

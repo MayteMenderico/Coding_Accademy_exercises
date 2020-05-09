@@ -19,5 +19,7 @@ $router->use('POST', 'login', new App\Controllers\LoginController(), 'login');
 
 $router->use('GET', 'logout', new App\Controllers\LogOutController(), 'logout');
 
+$router->use('GET', 'delete-account', new App\Controllers\AccountDeleteController(), 'account_delete');
+
 $router->use('GET', 'settings', new App\Controllers\UserSettingsController(), 'settings_view');
 $router->use('POST', 'settings', new App\Controllers\UserSettingsController(), 'settings');
