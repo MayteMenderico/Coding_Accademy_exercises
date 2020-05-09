@@ -23,11 +23,11 @@ class ORM {
    * @return ORM - Instance of the ORM
    */
   public static function getInstance() {
-      if (is_null(self::$instance)) {
-          self::$instance = new ORM();
-      }
+    if (is_null(self::$instance)) {
+      self::$instance = new ORM();
+    }
 
-      return self::$instance;
+    return self::$instance;
   }
 
   /**
@@ -64,13 +64,13 @@ class ORM {
     // TODO: Implement this function
     $query = $this->db->prepare($this->query);
     $query->execute();
+    //$result = $query->fetchAll(PDO::FETCH_ASSOC);
     $query = '';
   }
 
   //select("users", "user_id, username, email", "user_id > 3", true);
   public function select($table, $values = "*", $condition = null, $multiple = true){
-
-    $query = "SELECT $values FROM $table";
+    $query = "SELECT $values FROM $table ";
     if($condition !== NULL){
       $query .= "WHERE $condition"; 
     }
@@ -82,6 +82,5 @@ class ORM {
       return $query->fetchAll(PDO::FETCH_ASSOC);
     }
     return $query->fetch(PDO::FETCH_ASSOC);
-
   }
 }
